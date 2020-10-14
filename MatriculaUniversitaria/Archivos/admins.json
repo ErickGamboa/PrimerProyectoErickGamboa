@@ -1,0 +1,10 @@
+[
+	{
+		"usuario":"Admin",
+		"contrasenna":"123"
+	},
+	{
+		"usuario":"Core",
+		"contrasenna":"123"
+	}
+]
