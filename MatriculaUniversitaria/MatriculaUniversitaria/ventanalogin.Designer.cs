@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContra = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtUsuario.AccessibleName = "";
+            this.txtUsuario.Location = new System.Drawing.Point(224, 98);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(137, 20);
+            this.txtUsuario.TabIndex = 0;
             // 
             // label1
             // 
@@ -75,13 +76,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Contraseña";
             // 
-            // textBox2
+            // txtContra
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtContra.AccessibleName = "";
+            this.txtContra.Location = new System.Drawing.Point(224, 155);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
+            this.txtContra.Size = new System.Drawing.Size(137, 20);
+            this.txtContra.TabIndex = 6;
             // 
             // button1
             // 
@@ -109,11 +111,11 @@
             this.ClientSize = new System.Drawing.Size(436, 250);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsuario);
             this.Name = "ventanaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -125,11 +127,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
     }

@@ -11,16 +11,33 @@ namespace CapaDatos
 {
     public class DLogin
     {
-        static string admin_path = @"C:\Users\Usuario\Desktop\PrimerProyeto\MatriculaUniversitaria\Archivos\admins.json";
+        private List<EAdmin> list_admins;
+        private Servicio servicio;
 
-        public List<EAdmin> ListaAdmins()
+        public DLogin()
         {
-            StreamReader jsonStream = File.OpenText(admin_path);
-            var json = jsonStream.ReadToEnd();
-
-            List<EAdmin> list = JsonConvert.DeserializeObject<List<EAdmin>>(json);
-            return list;
+            this.servicio = new Servicio("admins.json");
+            this.list_admins = JsonConvert.DeserializeObject<List<EAdmin>>(this.servicio.ObtenerArchivo());
         }
 
+        public EAdmin Login(string usuario, string contra)
+        {
+            foreach (EAdmin item in this.list_admins)
+            {
+                if (item.usuario.Equals(usuario) && item.contrasenna.Equals(contra))
+                {
+                    return item;
+                }
+                
+            }
+            this.LoginUsuaros(usuario, contra);
+            return null;
+        }
+
+        public EAdmin LoginUsuaros(string usuario, string contra)
+        {
+            //TODO: Hacer logica para login con usuarios.
+            return null;
+        }
     }
 }

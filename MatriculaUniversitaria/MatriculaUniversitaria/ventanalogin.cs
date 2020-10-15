@@ -15,13 +15,13 @@ namespace MatriculaUniversitaria
     public partial class ventanaLogin : Form
     {
         public LLogin login;
-        public List<EAdmin> loginA;
+        public EAdmin admin;
 
         public ventanaLogin()
         {
             InitializeComponent();
             login = new LLogin();
-            loginA = new List<EAdmin>();
+            admin = new EAdmin();
 
         }
 
@@ -32,8 +32,18 @@ namespace MatriculaUniversitaria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            loginA = login.cargarDatos();
-            lblError.Text = loginA[1].usuario;
+            this.admin = login.Login(txtUsuario.Text, txtContra.Text);
+            if( this.admin != null)
+            {
+                VentanaAdmin admin = new VentanaAdmin();
+                admin.Show(this);
+                this.Hide();
+            }
+            else
+            {
+                lblError.Text = "No existe un usuario con esas credenciales.";
+            }
+
         }
 
         private void ventanaLogin_Load(object sender, EventArgs e)
