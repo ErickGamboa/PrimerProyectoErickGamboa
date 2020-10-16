@@ -1,9 +1,11 @@
 [
 	{
+		"id":"ctr10",
 		"usuario":"Admin",
 		"contrasenna":"123"
 	},
 	{
+		"id":"ctr08",
 		"usuario":"Core",
 		"contrasenna":"123"
 	}

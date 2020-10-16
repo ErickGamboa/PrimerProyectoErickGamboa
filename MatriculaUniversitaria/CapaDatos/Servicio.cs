@@ -18,10 +18,19 @@ namespace CapaDatos
             jsonStream = File.OpenText(ruta + ruta_archivo);
         }
 
+        public Servicio() { }
+
         public String ObtenerArchivo()
         {
             String json = jsonStream.ReadToEnd();
             return json;
+        }
+
+        public Boolean GuardarEnArchivo(string archivo, string ruta_archivo)
+        {
+            string rutaFinal = ruta + ruta_archivo;
+            File.WriteAllText(rutaFinal, archivo);
+            return true;
         }
     }
 }

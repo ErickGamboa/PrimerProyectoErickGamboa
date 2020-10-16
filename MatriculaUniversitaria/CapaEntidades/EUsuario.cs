@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    class EUsuario
+    public class EUsuario
     {
 
     }
