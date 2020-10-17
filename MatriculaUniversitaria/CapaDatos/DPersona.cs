@@ -21,21 +21,33 @@ namespace CapaDatos
             this.lista_personas = JsonConvert.DeserializeObject<List<Persona>>(this.servicio.ObtenerArchivo());
             this.servicio = new Servicio();
         }
+
         public bool Registrar(Persona persona)
         {
-            if(lista_personas.Count != 0)
+            if(lista_personas == null)
+            {
+                this.json = "[" + JsonConvert.SerializeObject(persona) + "]";
+                return this.servicio.GuardarEnArchivo(json, "personas.json");
+            }
+            if (lista_personas.Count != 0)
             {
                 this.json = "[";
                 foreach (Persona item in lista_personas)
                 {
                     this.json += JsonConvert.SerializeObject(item) + ",";
                 }
-                this.json += "[ " + JsonConvert.SerializeObject(persona) + "]";
+                this.json += JsonConvert.SerializeObject(persona) + "]";
                 return this.servicio.GuardarEnArchivo(json, "personas.json");
             }
-            this.json = JsonConvert.SerializeObject(persona);
-            return this.servicio.GuardarEnArchivo(json, "personas.json");
 
+            return false;
+        }
+
+        public List<Persona> CargarPersonas()
+        {
+            List<Persona> listaProvicionl = new List<Persona>();
+            listaProvicionl = lista_personas;
+            return listaProvicionl;
         }
     }
 }

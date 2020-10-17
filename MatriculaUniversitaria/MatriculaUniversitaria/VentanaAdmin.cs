@@ -15,6 +15,7 @@ namespace MatriculaUniversitaria
     public partial class VentanaAdmin : Form
     {
         public LPersona L_persona;
+        public List<Persona> listaTotalDePersonas;
         public VentanaAdmin()
         {
             this.L_persona = new LPersona();
@@ -61,6 +62,16 @@ namespace MatriculaUniversitaria
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dgvPersonas.DataSource = L_persona.CargarPersonas();
         }
     }
 }

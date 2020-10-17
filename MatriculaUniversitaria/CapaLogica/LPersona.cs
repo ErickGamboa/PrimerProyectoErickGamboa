@@ -21,5 +21,13 @@ namespace CapaLogica
         {
             return D_persona.Registrar(persona);
         }
+
+        public List<Persona> CargarPersonas()
+        {
+            List<Persona> listaProvicionl = new List<Persona>();
+            listaProvicionl = D_persona.CargarPersonas();
+            return listaProvicionl;
+        }
+
     }
 }
