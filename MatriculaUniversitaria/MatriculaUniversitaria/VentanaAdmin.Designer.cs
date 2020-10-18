@@ -31,10 +31,26 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btncargarpersona = new System.Windows.Forms.Button();
+            this.dgvPersonas = new System.Windows.Forms.DataGridView();
+            this.idpersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivelAcademicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioRegistraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nacionalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblprueba = new System.Windows.Forms.Label();
             this.cbxtipo = new System.Windows.Forms.ComboBox();
             this.txtNom = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btneditarpersona = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtCed = new System.Windows.Forms.TextBox();
@@ -66,27 +82,74 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btng = new System.Windows.Forms.Button();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.personaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idpersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelAcademicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioRegistraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoPersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nacionalidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtnombrec = new System.Windows.Forms.TextBox();
+            this.txtidcarrera = new System.Windows.Forms.TextBox();
+            this.txtcreditos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbxestadoc = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtpfechaapertura = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtpfechacierre = new System.Windows.Forms.DateTimePicker();
+            this.btnguardarcarrera = new System.Windows.Forms.Button();
+            this.dgvcarrera = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btncargarlista = new System.Windows.Forms.Button();
+            this.btneditarlista = new System.Windows.Forms.Button();
+            this.btneliminarlista = new System.Windows.Forms.Button();
+            this.txtnombremateria = new System.Windows.Forms.TextBox();
+            this.txtidmateria = new System.Windows.Forms.TextBox();
+            this.txtcreditosmateria = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtidcarreraMateria = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtprecio = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtcosto = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnguardarCa = new System.Windows.Forms.Button();
+            this.dgvmaterias = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btneliminarmaterias = new System.Windows.Forms.Button();
+            this.btneditarmaterias = new System.Windows.Forms.Button();
+            this.btncargarmaterias = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcarrera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmaterias)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,15 +162,16 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1406, 387);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btncargarpersona);
             this.tabPage1.Controls.Add(this.dgvPersonas);
             this.tabPage1.Controls.Add(this.lblprueba);
             this.tabPage1.Controls.Add(this.cbxtipo);
             this.tabPage1.Controls.Add(this.txtNom);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.btneditarpersona);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.btnguardar);
             this.tabPage1.Controls.Add(this.txtCed);
@@ -133,6 +197,122 @@
             this.tabPage1.Text = "CRUD personas";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btncargarpersona
+            // 
+            this.btncargarpersona.Location = new System.Drawing.Point(733, 203);
+            this.btncargarpersona.Name = "btncargarpersona";
+            this.btncargarpersona.Size = new System.Drawing.Size(75, 23);
+            this.btncargarpersona.TabIndex = 27;
+            this.btncargarpersona.Text = "Cargar lista";
+            this.btncargarpersona.UseVisualStyleBackColor = true;
+            this.btncargarpersona.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dgvPersonas
+            // 
+            this.dgvPersonas.AutoGenerateColumns = false;
+            this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idpersonaDataGridViewTextBoxColumn,
+            this.cedulaDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.apellido1DataGridViewTextBoxColumn,
+            this.apellido2DataGridViewTextBoxColumn,
+            this.sexoDataGridViewTextBoxColumn,
+            this.fechaNacimientoDataGridViewTextBoxColumn,
+            this.nivelAcademicoDataGridViewTextBoxColumn,
+            this.fechaIngresoDataGridViewTextBoxColumn,
+            this.usuarioRegistraDataGridViewTextBoxColumn,
+            this.tipoPersonaDataGridViewTextBoxColumn,
+            this.nacionalidadDataGridViewTextBoxColumn,
+            this.estadoDataGridViewTextBoxColumn});
+            this.dgvPersonas.DataSource = this.personaBindingSource1;
+            this.dgvPersonas.Location = new System.Drawing.Point(374, 6);
+            this.dgvPersonas.Name = "dgvPersonas";
+            this.dgvPersonas.Size = new System.Drawing.Size(1018, 150);
+            this.dgvPersonas.TabIndex = 26;
+            // 
+            // idpersonaDataGridViewTextBoxColumn
+            // 
+            this.idpersonaDataGridViewTextBoxColumn.DataPropertyName = "idpersona";
+            this.idpersonaDataGridViewTextBoxColumn.HeaderText = "idpersona";
+            this.idpersonaDataGridViewTextBoxColumn.Name = "idpersonaDataGridViewTextBoxColumn";
+            // 
+            // cedulaDataGridViewTextBoxColumn
+            // 
+            this.cedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula";
+            this.cedulaDataGridViewTextBoxColumn.HeaderText = "cedula";
+            this.cedulaDataGridViewTextBoxColumn.Name = "cedulaDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // apellido1DataGridViewTextBoxColumn
+            // 
+            this.apellido1DataGridViewTextBoxColumn.DataPropertyName = "apellido1";
+            this.apellido1DataGridViewTextBoxColumn.HeaderText = "apellido1";
+            this.apellido1DataGridViewTextBoxColumn.Name = "apellido1DataGridViewTextBoxColumn";
+            // 
+            // apellido2DataGridViewTextBoxColumn
+            // 
+            this.apellido2DataGridViewTextBoxColumn.DataPropertyName = "apellido2";
+            this.apellido2DataGridViewTextBoxColumn.HeaderText = "apellido2";
+            this.apellido2DataGridViewTextBoxColumn.Name = "apellido2DataGridViewTextBoxColumn";
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "sexo";
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "fechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            // 
+            // nivelAcademicoDataGridViewTextBoxColumn
+            // 
+            this.nivelAcademicoDataGridViewTextBoxColumn.DataPropertyName = "nivelAcademico";
+            this.nivelAcademicoDataGridViewTextBoxColumn.HeaderText = "nivelAcademico";
+            this.nivelAcademicoDataGridViewTextBoxColumn.Name = "nivelAcademicoDataGridViewTextBoxColumn";
+            // 
+            // fechaIngresoDataGridViewTextBoxColumn
+            // 
+            this.fechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "fechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.HeaderText = "fechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.Name = "fechaIngresoDataGridViewTextBoxColumn";
+            // 
+            // usuarioRegistraDataGridViewTextBoxColumn
+            // 
+            this.usuarioRegistraDataGridViewTextBoxColumn.DataPropertyName = "usuarioRegistra";
+            this.usuarioRegistraDataGridViewTextBoxColumn.HeaderText = "usuarioRegistra";
+            this.usuarioRegistraDataGridViewTextBoxColumn.Name = "usuarioRegistraDataGridViewTextBoxColumn";
+            // 
+            // tipoPersonaDataGridViewTextBoxColumn
+            // 
+            this.tipoPersonaDataGridViewTextBoxColumn.DataPropertyName = "tipoPersona";
+            this.tipoPersonaDataGridViewTextBoxColumn.HeaderText = "tipoPersona";
+            this.tipoPersonaDataGridViewTextBoxColumn.Name = "tipoPersonaDataGridViewTextBoxColumn";
+            // 
+            // nacionalidadDataGridViewTextBoxColumn
+            // 
+            this.nacionalidadDataGridViewTextBoxColumn.DataPropertyName = "nacionalidad";
+            this.nacionalidadDataGridViewTextBoxColumn.HeaderText = "nacionalidad";
+            this.nacionalidadDataGridViewTextBoxColumn.Name = "nacionalidadDataGridViewTextBoxColumn";
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            // 
+            // personaBindingSource1
+            // 
+            this.personaBindingSource1.DataSource = typeof(CapaEntidades.Persona);
             // 
             // lblprueba
             // 
@@ -162,18 +342,18 @@
             this.txtNom.Size = new System.Drawing.Size(206, 20);
             this.txtNom.TabIndex = 23;
             // 
-            // button3
+            // btneditarpersona
             // 
-            this.button3.Location = new System.Drawing.Point(846, 329);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btneditarpersona.Location = new System.Drawing.Point(852, 203);
+            this.btneditarpersona.Name = "btneditarpersona";
+            this.btneditarpersona.Size = new System.Drawing.Size(75, 23);
+            this.btneditarpersona.TabIndex = 22;
+            this.btneditarpersona.Text = "Editar";
+            this.btneditarpersona.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(942, 329);
+            this.button2.Location = new System.Drawing.Point(969, 203);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 21;
@@ -279,6 +459,7 @@
             this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Fecha de nacimiento";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cbxnacimiento
             // 
@@ -286,6 +467,7 @@
             this.cbxnacimiento.Name = "cbxnacimiento";
             this.cbxnacimiento.Size = new System.Drawing.Size(206, 20);
             this.cbxnacimiento.TabIndex = 6;
+            this.cbxnacimiento.ValueChanged += new System.EventHandler(this.cbxnacimiento_ValueChanged);
             // 
             // cbxSexo
             // 
@@ -338,6 +520,22 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btneliminarlista);
+            this.tabPage2.Controls.Add(this.btneditarlista);
+            this.tabPage2.Controls.Add(this.btncargarlista);
+            this.tabPage2.Controls.Add(this.dgvcarrera);
+            this.tabPage2.Controls.Add(this.btnguardarcarrera);
+            this.tabPage2.Controls.Add(this.dtpfechacierre);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.dtpfechaapertura);
+            this.tabPage2.Controls.Add(this.cbxestadoc);
+            this.tabPage2.Controls.Add(this.txtnombrec);
+            this.tabPage2.Controls.Add(this.txtidcarrera);
+            this.tabPage2.Controls.Add(this.txtcreditos);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -348,6 +546,23 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btneliminarmaterias);
+            this.tabPage3.Controls.Add(this.btneditarmaterias);
+            this.tabPage3.Controls.Add(this.btncargarmaterias);
+            this.tabPage3.Controls.Add(this.dgvmaterias);
+            this.tabPage3.Controls.Add(this.btnguardarCa);
+            this.tabPage3.Controls.Add(this.txtcosto);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.txtprecio);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.txtidcarreraMateria);
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.txtnombremateria);
+            this.tabPage3.Controls.Add(this.txtidmateria);
+            this.tabPage3.Controls.Add(this.txtcreditosmateria);
+            this.tabPage3.Controls.Add(this.label12);
+            this.tabPage3.Controls.Add(this.label13);
+            this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -465,121 +680,475 @@
             // 
             this.personaBindingSource.DataSource = typeof(CapaEntidades.Persona);
             // 
-            // dgvPersonas
+            // txtnombrec
             // 
-            this.dgvPersonas.AutoGenerateColumns = false;
-            this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPersonas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idpersonaDataGridViewTextBoxColumn,
-            this.cedulaDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellido1DataGridViewTextBoxColumn,
-            this.apellido2DataGridViewTextBoxColumn,
-            this.sexoDataGridViewTextBoxColumn,
-            this.fechaNacimientoDataGridViewTextBoxColumn,
-            this.nivelAcademicoDataGridViewTextBoxColumn,
-            this.fechaIngresoDataGridViewTextBoxColumn,
-            this.usuarioRegistraDataGridViewTextBoxColumn,
-            this.tipoPersonaDataGridViewTextBoxColumn,
-            this.nacionalidadDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn});
-            this.dgvPersonas.DataSource = this.personaBindingSource1;
-            this.dgvPersonas.Location = new System.Drawing.Point(374, 6);
-            this.dgvPersonas.Name = "dgvPersonas";
-            this.dgvPersonas.Size = new System.Drawing.Size(1018, 150);
-            this.dgvPersonas.TabIndex = 26;
+            this.txtnombrec.Location = new System.Drawing.Point(174, 86);
+            this.txtnombrec.Name = "txtnombrec";
+            this.txtnombrec.Size = new System.Drawing.Size(206, 20);
+            this.txtnombrec.TabIndex = 29;
+            this.txtnombrec.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // button1
+            // txtidcarrera
             // 
-            this.button1.Location = new System.Drawing.Point(421, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.txtidcarrera.Location = new System.Drawing.Point(174, 58);
+            this.txtidcarrera.Name = "txtidcarrera";
+            this.txtidcarrera.Size = new System.Drawing.Size(206, 20);
+            this.txtidcarrera.TabIndex = 28;
+            this.txtidcarrera.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // personaBindingSource1
+            // txtcreditos
             // 
-            this.personaBindingSource1.DataSource = typeof(CapaEntidades.Persona);
+            this.txtcreditos.Location = new System.Drawing.Point(174, 112);
+            this.txtcreditos.Name = "txtcreditos";
+            this.txtcreditos.Size = new System.Drawing.Size(206, 20);
+            this.txtcreditos.TabIndex = 27;
+            this.txtcreditos.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // idpersonaDataGridViewTextBoxColumn
+            // label1
             // 
-            this.idpersonaDataGridViewTextBoxColumn.DataPropertyName = "idpersona";
-            this.idpersonaDataGridViewTextBoxColumn.HeaderText = "idpersona";
-            this.idpersonaDataGridViewTextBoxColumn.Name = "idpersonaDataGridViewTextBoxColumn";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(45, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Créditos totales";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // cedulaDataGridViewTextBoxColumn
+            // label8
             // 
-            this.cedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula";
-            this.cedulaDataGridViewTextBoxColumn.HeaderText = "cedula";
-            this.cedulaDataGridViewTextBoxColumn.Name = "cedulaDataGridViewTextBoxColumn";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(45, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Nombre";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // nombreDataGridViewTextBoxColumn
+            // label9
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(45, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "ID carrera";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // apellido1DataGridViewTextBoxColumn
+            // cbxestadoc
             // 
-            this.apellido1DataGridViewTextBoxColumn.DataPropertyName = "apellido1";
-            this.apellido1DataGridViewTextBoxColumn.HeaderText = "apellido1";
-            this.apellido1DataGridViewTextBoxColumn.Name = "apellido1DataGridViewTextBoxColumn";
+            this.cbxestadoc.FormattingEnabled = true;
+            this.cbxestadoc.Items.AddRange(new object[] {
+            "En oferta",
+            "Cerrada"});
+            this.cbxestadoc.Location = new System.Drawing.Point(48, 148);
+            this.cbxestadoc.Name = "cbxestadoc";
+            this.cbxestadoc.Size = new System.Drawing.Size(86, 21);
+            this.cbxestadoc.TabIndex = 30;
+            this.cbxestadoc.Text = "Estado";
             // 
-            // apellido2DataGridViewTextBoxColumn
+            // label10
             // 
-            this.apellido2DataGridViewTextBoxColumn.DataPropertyName = "apellido2";
-            this.apellido2DataGridViewTextBoxColumn.HeaderText = "apellido2";
-            this.apellido2DataGridViewTextBoxColumn.Name = "apellido2DataGridViewTextBoxColumn";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(45, 195);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Fecha de apertura";
             // 
-            // sexoDataGridViewTextBoxColumn
+            // dtpfechaapertura
             // 
-            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
-            this.sexoDataGridViewTextBoxColumn.HeaderText = "sexo";
-            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.dtpfechaapertura.Location = new System.Drawing.Point(174, 189);
+            this.dtpfechaapertura.Name = "dtpfechaapertura";
+            this.dtpfechaapertura.Size = new System.Drawing.Size(206, 20);
+            this.dtpfechaapertura.TabIndex = 31;
             // 
-            // fechaNacimientoDataGridViewTextBoxColumn
+            // label11
             // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "fechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(45, 229);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Fecha de cierre";
             // 
-            // nivelAcademicoDataGridViewTextBoxColumn
+            // dtpfechacierre
             // 
-            this.nivelAcademicoDataGridViewTextBoxColumn.DataPropertyName = "nivelAcademico";
-            this.nivelAcademicoDataGridViewTextBoxColumn.HeaderText = "nivelAcademico";
-            this.nivelAcademicoDataGridViewTextBoxColumn.Name = "nivelAcademicoDataGridViewTextBoxColumn";
+            this.dtpfechacierre.Location = new System.Drawing.Point(174, 229);
+            this.dtpfechacierre.Name = "dtpfechacierre";
+            this.dtpfechacierre.Size = new System.Drawing.Size(206, 20);
+            this.dtpfechacierre.TabIndex = 34;
             // 
-            // fechaIngresoDataGridViewTextBoxColumn
+            // btnguardarcarrera
             // 
-            this.fechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "fechaIngreso";
-            this.fechaIngresoDataGridViewTextBoxColumn.HeaderText = "fechaIngreso";
-            this.fechaIngresoDataGridViewTextBoxColumn.Name = "fechaIngresoDataGridViewTextBoxColumn";
+            this.btnguardarcarrera.Location = new System.Drawing.Point(314, 277);
+            this.btnguardarcarrera.Name = "btnguardarcarrera";
+            this.btnguardarcarrera.Size = new System.Drawing.Size(75, 23);
+            this.btnguardarcarrera.TabIndex = 35;
+            this.btnguardarcarrera.Text = "Guardar";
+            this.btnguardarcarrera.UseVisualStyleBackColor = true;
             // 
-            // usuarioRegistraDataGridViewTextBoxColumn
+            // dgvcarrera
             // 
-            this.usuarioRegistraDataGridViewTextBoxColumn.DataPropertyName = "usuarioRegistra";
-            this.usuarioRegistraDataGridViewTextBoxColumn.HeaderText = "usuarioRegistra";
-            this.usuarioRegistraDataGridViewTextBoxColumn.Name = "usuarioRegistraDataGridViewTextBoxColumn";
+            this.dgvcarrera.AutoGenerateColumns = false;
+            this.dgvcarrera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcarrera.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dgvcarrera.DataSource = this.personaBindingSource1;
+            this.dgvcarrera.Location = new System.Drawing.Point(418, 58);
+            this.dgvcarrera.Name = "dgvcarrera";
+            this.dgvcarrera.Size = new System.Drawing.Size(1018, 150);
+            this.dgvcarrera.TabIndex = 36;
             // 
-            // tipoPersonaDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.tipoPersonaDataGridViewTextBoxColumn.DataPropertyName = "tipoPersona";
-            this.tipoPersonaDataGridViewTextBoxColumn.HeaderText = "tipoPersona";
-            this.tipoPersonaDataGridViewTextBoxColumn.Name = "tipoPersonaDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idpersona";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idpersona";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // nacionalidadDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nacionalidadDataGridViewTextBoxColumn.DataPropertyName = "nacionalidad";
-            this.nacionalidadDataGridViewTextBoxColumn.HeaderText = "nacionalidad";
-            this.nacionalidadDataGridViewTextBoxColumn.Name = "nacionalidadDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "cedula";
+            this.dataGridViewTextBoxColumn2.HeaderText = "cedula";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // estadoDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn3.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "apellido1";
+            this.dataGridViewTextBoxColumn4.HeaderText = "apellido1";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "apellido2";
+            this.dataGridViewTextBoxColumn5.HeaderText = "apellido2";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "sexo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "sexo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn7.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "nivelAcademico";
+            this.dataGridViewTextBoxColumn8.HeaderText = "nivelAcademico";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "fechaIngreso";
+            this.dataGridViewTextBoxColumn9.HeaderText = "fechaIngreso";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "usuarioRegistra";
+            this.dataGridViewTextBoxColumn10.HeaderText = "usuarioRegistra";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "tipoPersona";
+            this.dataGridViewTextBoxColumn11.HeaderText = "tipoPersona";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "nacionalidad";
+            this.dataGridViewTextBoxColumn12.HeaderText = "nacionalidad";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn13.HeaderText = "estado";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // btncargarlista
+            // 
+            this.btncargarlista.Location = new System.Drawing.Point(767, 230);
+            this.btncargarlista.Name = "btncargarlista";
+            this.btncargarlista.Size = new System.Drawing.Size(75, 23);
+            this.btncargarlista.TabIndex = 37;
+            this.btncargarlista.Text = "Cargar lista";
+            this.btncargarlista.UseVisualStyleBackColor = true;
+            // 
+            // btneditarlista
+            // 
+            this.btneditarlista.Location = new System.Drawing.Point(893, 230);
+            this.btneditarlista.Name = "btneditarlista";
+            this.btneditarlista.Size = new System.Drawing.Size(75, 23);
+            this.btneditarlista.TabIndex = 38;
+            this.btneditarlista.Text = "Editar";
+            this.btneditarlista.UseVisualStyleBackColor = true;
+            // 
+            // btneliminarlista
+            // 
+            this.btneliminarlista.Location = new System.Drawing.Point(1018, 230);
+            this.btneliminarlista.Name = "btneliminarlista";
+            this.btneliminarlista.Size = new System.Drawing.Size(75, 23);
+            this.btneliminarlista.TabIndex = 39;
+            this.btneliminarlista.Text = "Eiminar";
+            this.btneliminarlista.UseVisualStyleBackColor = true;
+            // 
+            // txtnombremateria
+            // 
+            this.txtnombremateria.Location = new System.Drawing.Point(173, 72);
+            this.txtnombremateria.Name = "txtnombremateria";
+            this.txtnombremateria.Size = new System.Drawing.Size(206, 20);
+            this.txtnombremateria.TabIndex = 35;
+            // 
+            // txtidmateria
+            // 
+            this.txtidmateria.Location = new System.Drawing.Point(173, 44);
+            this.txtidmateria.Name = "txtidmateria";
+            this.txtidmateria.Size = new System.Drawing.Size(206, 20);
+            this.txtidmateria.TabIndex = 34;
+            // 
+            // txtcreditosmateria
+            // 
+            this.txtcreditosmateria.Location = new System.Drawing.Point(173, 98);
+            this.txtcreditosmateria.Name = "txtcreditosmateria";
+            this.txtcreditosmateria.Size = new System.Drawing.Size(206, 20);
+            this.txtcreditosmateria.TabIndex = 33;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(44, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Créditos";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(44, 75);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Nombre materia";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(44, 44);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(55, 13);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "ID materia";
+            // 
+            // txtidcarreraMateria
+            // 
+            this.txtidcarreraMateria.Location = new System.Drawing.Point(173, 124);
+            this.txtidcarreraMateria.Name = "txtidcarreraMateria";
+            this.txtidcarreraMateria.Size = new System.Drawing.Size(206, 20);
+            this.txtidcarreraMateria.TabIndex = 37;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(44, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 13);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "ID carrera";
+            // 
+            // txtprecio
+            // 
+            this.txtprecio.Location = new System.Drawing.Point(173, 150);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(206, 20);
+            this.txtprecio.TabIndex = 39;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(44, 153);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Precio";
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.Location = new System.Drawing.Point(173, 176);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.Size = new System.Drawing.Size(206, 20);
+            this.txtcosto.TabIndex = 41;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(44, 179);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 13);
+            this.label17.TabIndex = 40;
+            this.label17.Text = "Costo";
+            // 
+            // btnguardarCa
+            // 
+            this.btnguardarCa.Location = new System.Drawing.Point(304, 235);
+            this.btnguardarCa.Name = "btnguardarCa";
+            this.btnguardarCa.Size = new System.Drawing.Size(75, 23);
+            this.btnguardarCa.TabIndex = 42;
+            this.btnguardarCa.Text = "Guardar";
+            this.btnguardarCa.UseVisualStyleBackColor = true;
+            // 
+            // dgvmaterias
+            // 
+            this.dgvmaterias.AutoGenerateColumns = false;
+            this.dgvmaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmaterias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
+            this.dgvmaterias.DataSource = this.personaBindingSource1;
+            this.dgvmaterias.Location = new System.Drawing.Point(416, 42);
+            this.dgvmaterias.Name = "dgvmaterias";
+            this.dgvmaterias.Size = new System.Drawing.Size(1018, 150);
+            this.dgvmaterias.TabIndex = 43;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "idpersona";
+            this.dataGridViewTextBoxColumn14.HeaderText = "idpersona";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "cedula";
+            this.dataGridViewTextBoxColumn15.HeaderText = "cedula";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn16.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "apellido1";
+            this.dataGridViewTextBoxColumn17.HeaderText = "apellido1";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "apellido2";
+            this.dataGridViewTextBoxColumn18.HeaderText = "apellido2";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "sexo";
+            this.dataGridViewTextBoxColumn19.HeaderText = "sexo";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn20.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "nivelAcademico";
+            this.dataGridViewTextBoxColumn21.HeaderText = "nivelAcademico";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "fechaIngreso";
+            this.dataGridViewTextBoxColumn22.HeaderText = "fechaIngreso";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "usuarioRegistra";
+            this.dataGridViewTextBoxColumn23.HeaderText = "usuarioRegistra";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "tipoPersona";
+            this.dataGridViewTextBoxColumn24.HeaderText = "tipoPersona";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "nacionalidad";
+            this.dataGridViewTextBoxColumn25.HeaderText = "nacionalidad";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn26.HeaderText = "estado";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // btneliminarmaterias
+            // 
+            this.btneliminarmaterias.Location = new System.Drawing.Point(970, 225);
+            this.btneliminarmaterias.Name = "btneliminarmaterias";
+            this.btneliminarmaterias.Size = new System.Drawing.Size(75, 23);
+            this.btneliminarmaterias.TabIndex = 46;
+            this.btneliminarmaterias.Text = "Eiminar";
+            this.btneliminarmaterias.UseVisualStyleBackColor = true;
+            // 
+            // btneditarmaterias
+            // 
+            this.btneditarmaterias.Location = new System.Drawing.Point(845, 225);
+            this.btneditarmaterias.Name = "btneditarmaterias";
+            this.btneditarmaterias.Size = new System.Drawing.Size(75, 23);
+            this.btneditarmaterias.TabIndex = 45;
+            this.btneditarmaterias.Text = "Editar";
+            this.btneditarmaterias.UseVisualStyleBackColor = true;
+            // 
+            // btncargarmaterias
+            // 
+            this.btncargarmaterias.Location = new System.Drawing.Point(719, 225);
+            this.btncargarmaterias.Name = "btncargarmaterias";
+            this.btncargarmaterias.Size = new System.Drawing.Size(75, 23);
+            this.btncargarmaterias.TabIndex = 44;
+            this.btncargarmaterias.Text = "Cargar lista";
+            this.btncargarmaterias.UseVisualStyleBackColor = true;
             // 
             // VentanaAdmin
             // 
@@ -594,9 +1163,15 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcarrera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmaterias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,7 +1198,7 @@
         private System.Windows.Forms.TextBox txtCed;
         private System.Windows.Forms.TextBox txtApellidoUno;
         private System.Windows.Forms.TextBox txtApellidoDos;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btneditarpersona;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txtNombre;
@@ -641,7 +1216,7 @@
         private System.Windows.Forms.ComboBox cbxtipo;
         private System.Windows.Forms.Label lblprueba;
         private System.Windows.Forms.DataGridView dgvPersonas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncargarpersona;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpersonaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -656,5 +1231,64 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nacionalidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource personaBindingSource1;
+        private System.Windows.Forms.TextBox txtnombrec;
+        private System.Windows.Forms.TextBox txtidcarrera;
+        private System.Windows.Forms.TextBox txtcreditos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbxestadoc;
+        private System.Windows.Forms.Button btncargarlista;
+        private System.Windows.Forms.DataGridView dgvcarrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.Button btnguardarcarrera;
+        private System.Windows.Forms.DateTimePicker dtpfechacierre;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtpfechaapertura;
+        private System.Windows.Forms.Button btneliminarlista;
+        private System.Windows.Forms.Button btneditarlista;
+        private System.Windows.Forms.Button btneliminarmaterias;
+        private System.Windows.Forms.Button btneditarmaterias;
+        private System.Windows.Forms.Button btncargarmaterias;
+        private System.Windows.Forms.DataGridView dgvmaterias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.Button btnguardarCa;
+        private System.Windows.Forms.TextBox txtcosto;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtprecio;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtidcarreraMateria;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtnombremateria;
+        private System.Windows.Forms.TextBox txtidmateria;
+        private System.Windows.Forms.TextBox txtcreditosmateria;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }
