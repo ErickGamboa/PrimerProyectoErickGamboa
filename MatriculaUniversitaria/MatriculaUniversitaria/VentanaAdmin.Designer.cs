@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btncargarpersona = new System.Windows.Forms.Button();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
             this.idpersonaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,11 +94,9 @@
             this.dtpfechaapertura = new System.Windows.Forms.DateTimePicker();
             this.cbxestadoc = new System.Windows.Forms.ComboBox();
             this.txtnombrec = new System.Windows.Forms.TextBox();
-            this.txtidcarrera = new System.Windows.Forms.TextBox();
             this.txtcreditos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btneliminarmaterias = new System.Windows.Forms.Button();
             this.btneditarmaterias = new System.Windows.Forms.Button();
@@ -141,7 +140,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btng = new System.Windows.Forms.Button();
             this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
@@ -199,6 +197,16 @@
             this.tabPage1.Text = "CRUD personas";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(163, 309);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btncargarpersona
             // 
@@ -535,11 +543,9 @@
             this.tabPage2.Controls.Add(this.dtpfechaapertura);
             this.tabPage2.Controls.Add(this.cbxestadoc);
             this.tabPage2.Controls.Add(this.txtnombrec);
-            this.tabPage2.Controls.Add(this.txtidcarrera);
             this.tabPage2.Controls.Add(this.txtcreditos);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -574,6 +580,7 @@
             this.btncargarlista.TabIndex = 37;
             this.btncargarlista.Text = "Cargar lista";
             this.btncargarlista.UseVisualStyleBackColor = true;
+            this.btncargarlista.Click += new System.EventHandler(this.btncargarlista_Click);
             // 
             // dgvcarrera
             // 
@@ -594,9 +601,9 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.dgvcarrera.DataSource = this.personaBindingSource1;
-            this.dgvcarrera.Location = new System.Drawing.Point(418, 58);
+            this.dgvcarrera.Location = new System.Drawing.Point(396, 58);
             this.dgvcarrera.Name = "dgvcarrera";
-            this.dgvcarrera.Size = new System.Drawing.Size(1018, 150);
+            this.dgvcarrera.Size = new System.Drawing.Size(974, 150);
             this.dgvcarrera.TabIndex = 36;
             // 
             // dataGridViewTextBoxColumn1
@@ -679,16 +686,17 @@
             // 
             // btnguardarcarrera
             // 
-            this.btnguardarcarrera.Location = new System.Drawing.Point(314, 277);
+            this.btnguardarcarrera.Location = new System.Drawing.Point(310, 249);
             this.btnguardarcarrera.Name = "btnguardarcarrera";
             this.btnguardarcarrera.Size = new System.Drawing.Size(75, 23);
             this.btnguardarcarrera.TabIndex = 35;
             this.btnguardarcarrera.Text = "Guardar";
             this.btnguardarcarrera.UseVisualStyleBackColor = true;
+            this.btnguardarcarrera.Click += new System.EventHandler(this.btnguardarcarrera_Click);
             // 
             // dtpfechacierre
             // 
-            this.dtpfechacierre.Location = new System.Drawing.Point(174, 229);
+            this.dtpfechacierre.Location = new System.Drawing.Point(170, 201);
             this.dtpfechacierre.Name = "dtpfechacierre";
             this.dtpfechacierre.Size = new System.Drawing.Size(206, 20);
             this.dtpfechacierre.TabIndex = 34;
@@ -696,7 +704,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(45, 229);
+            this.label11.Location = new System.Drawing.Point(41, 201);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 13);
             this.label11.TabIndex = 33;
@@ -705,7 +713,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(45, 195);
+            this.label10.Location = new System.Drawing.Point(41, 167);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 13);
             this.label10.TabIndex = 32;
@@ -713,7 +721,7 @@
             // 
             // dtpfechaapertura
             // 
-            this.dtpfechaapertura.Location = new System.Drawing.Point(174, 189);
+            this.dtpfechaapertura.Location = new System.Drawing.Point(170, 161);
             this.dtpfechaapertura.Name = "dtpfechaapertura";
             this.dtpfechaapertura.Size = new System.Drawing.Size(206, 20);
             this.dtpfechaapertura.TabIndex = 31;
@@ -724,7 +732,7 @@
             this.cbxestadoc.Items.AddRange(new object[] {
             "En oferta",
             "Cerrada"});
-            this.cbxestadoc.Location = new System.Drawing.Point(48, 148);
+            this.cbxestadoc.Location = new System.Drawing.Point(44, 120);
             this.cbxestadoc.Name = "cbxestadoc";
             this.cbxestadoc.Size = new System.Drawing.Size(86, 21);
             this.cbxestadoc.TabIndex = 30;
@@ -732,23 +740,15 @@
             // 
             // txtnombrec
             // 
-            this.txtnombrec.Location = new System.Drawing.Point(174, 86);
+            this.txtnombrec.Location = new System.Drawing.Point(170, 58);
             this.txtnombrec.Name = "txtnombrec";
             this.txtnombrec.Size = new System.Drawing.Size(206, 20);
             this.txtnombrec.TabIndex = 29;
             this.txtnombrec.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtidcarrera
-            // 
-            this.txtidcarrera.Location = new System.Drawing.Point(174, 58);
-            this.txtidcarrera.Name = "txtidcarrera";
-            this.txtidcarrera.Size = new System.Drawing.Size(206, 20);
-            this.txtidcarrera.TabIndex = 28;
-            this.txtidcarrera.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
             // txtcreditos
             // 
-            this.txtcreditos.Location = new System.Drawing.Point(174, 112);
+            this.txtcreditos.Location = new System.Drawing.Point(170, 84);
             this.txtcreditos.Name = "txtcreditos";
             this.txtcreditos.Size = new System.Drawing.Size(206, 20);
             this.txtcreditos.TabIndex = 27;
@@ -757,7 +757,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 115);
+            this.label1.Location = new System.Drawing.Point(41, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 26;
@@ -767,22 +767,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 89);
+            this.label8.Location = new System.Drawing.Point(41, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 25;
             this.label8.Text = "Nombre";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "ID carrera";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // tabPage3
             // 
@@ -1155,16 +1145,6 @@
             // 
             this.personaBindingSource.DataSource = typeof(CapaEntidades.Persona);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(163, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // VentanaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1247,11 +1227,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource personaBindingSource1;
         private System.Windows.Forms.TextBox txtnombrec;
-        private System.Windows.Forms.TextBox txtidcarrera;
         private System.Windows.Forms.TextBox txtcreditos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbxestadoc;
         private System.Windows.Forms.Button btncargarlista;
         private System.Windows.Forms.DataGridView dgvcarrera;

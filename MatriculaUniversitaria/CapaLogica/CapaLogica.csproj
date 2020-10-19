@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LCarrera.cs" />
     <Compile Include="LLogin.cs" />
     <Compile Include="LPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

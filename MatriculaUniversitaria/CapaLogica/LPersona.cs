@@ -17,9 +17,9 @@ namespace CapaLogica
             this.D_persona = new DPersona();
         }
 
-        public Boolean Registrar(Persona persona)
+        public Boolean RegistrarPersona(Persona persona)
         {
-            return D_persona.Registrar(persona);
+            return D_persona.RegistrarPersona(persona);
         }
 
         public List<Persona> CargarPersonas()

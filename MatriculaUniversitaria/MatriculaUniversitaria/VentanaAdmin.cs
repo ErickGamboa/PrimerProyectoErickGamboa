@@ -21,6 +21,7 @@ namespace MatriculaUniversitaria
         {
             InitializeComponent();
             this.L_persona = new LPersona();
+           
         }
 
 
@@ -50,9 +51,9 @@ namespace MatriculaUniversitaria
             persona.tipoPersona = cbxtipo.Text;
             persona.nacionalidad = cbxnacionalidad.Text;
             persona.estado = cbxestado.Text;
-            L_persona.Registrar(persona);
+            L_persona.RegistrarPersona(persona);
             lblprueba.Text = "Se ha guardado la persona exitosamente.";
-            CargarTabla();
+            CargarTablaPersonas();
             LimpiarDatos();
 
         }
@@ -64,10 +65,15 @@ namespace MatriculaUniversitaria
             txtApellidoDos.Text = "";
         }
 
-        public void CargarTabla()
+        public void CargarTablaPersonas()
         {
             LPersona lista_personas = new LPersona();
             dgvPersonas.DataSource = lista_personas.CargarPersonas();
+        }
+        public void CargarTablaCarreras()
+        {
+            LCarrera lista_carreras = new LCarrera();
+            dgvPersonas.DataSource = lista_carreras.CargarCarreras();
         }
 
         private void VentanaAdmin_Load(object sender, EventArgs e)
@@ -87,7 +93,7 @@ namespace MatriculaUniversitaria
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CargarTabla();
+            CargarTablaPersonas();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -152,7 +158,7 @@ namespace MatriculaUniversitaria
                     if(L_persona.Eliminar(persona))
                     {
                         lblprueba.Text = "Se elimino la persona correctamente";
-                        CargarTabla();
+                        CargarTablaPersonas();
                     }
                     else{
                         lblprueba.Text = "No se pudo eliminar la persona correctamente";
@@ -190,7 +196,7 @@ namespace MatriculaUniversitaria
             cbxnacionalidad.Text = persona.nacionalidad;
             cbxestado.Text = persona.estado;
             lblprueba.Text = "Se ha Editado la persona exitosamente.";
-            CargarTabla();
+            CargarTablaPersonas();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -209,8 +215,27 @@ namespace MatriculaUniversitaria
             persona.nacionalidad = cbxnacionalidad.Text;
             persona.estado = cbxestado.Text;
             L_persona.Editar(persona);
-            CargarTabla();
+            CargarTablaPersonas();
             LimpiarDatos();
+        }
+
+        private void btncargarlista_Click(object sender, EventArgs e)
+        {
+            CargarTablaCarreras();
+        }
+
+        private void btnguardarcarrera_Click(object sender, EventArgs e)
+        {
+            Carrera carrera = new Carrera();
+            carrera.idcarrera = DateTime.Now.Millisecond.ToString() + DateTime.Now.Month.ToString();
+            carrera.nombreCarrera = txtnombrec.Text;
+            carrera.creditosCarrera = txtcreditos.Text;
+            carrera.estado = cbxestadoc.Text;
+            carrera.fechaApertura = Convert.ToDateTime(dtpfechaapertura.Text);
+            carrera.fechaCierre = Convert.ToDateTime(dtpfechacierre.Text);
+
+
+
         }
     }
 }

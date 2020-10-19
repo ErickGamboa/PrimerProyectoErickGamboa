@@ -13,7 +13,9 @@ namespace CapaDatos
     public class DPersona
     {
         static string url = @"C:\Users\Usuario\Desktop\PrimerProyeto\MatriculaUniversitaria\Archivos\personas.json";
-        public DPersona() {}
+        public DPersona() {
+
+        }
 
         public List<Persona> CargarListadoDePersonas()
         {
@@ -29,7 +31,7 @@ namespace CapaDatos
             return CargarListadoDePersonas();
         }
 
-        public bool Registrar(Persona persona)
+        public bool RegistrarPersona(Persona persona)
         {
             List<Persona> lista_provicional = CargarListadoDePersonas();
             string archivo;
