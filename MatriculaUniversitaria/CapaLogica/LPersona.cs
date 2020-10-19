@@ -24,10 +24,17 @@ namespace CapaLogica
 
         public List<Persona> CargarPersonas()
         {
-            List<Persona> listaProvicionl = new List<Persona>();
-            listaProvicionl = D_persona.CargarPersonas();
-            return listaProvicionl;
+            return D_persona.CargarPersonas();
         }
 
+        public Boolean Eliminar(Persona persona)
+        {
+            return D_persona.Eliminar(persona);
+        }
+
+        public Boolean Editar(Persona persona)
+        {
+            return D_persona.Editar(persona);
+        }
     }
 }

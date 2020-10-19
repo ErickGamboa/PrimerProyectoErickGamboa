@@ -32,7 +32,8 @@ namespace MatriculaUniversitaria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.admin = login.Login(txtUsuario.Text, txtContra.Text);
+            this.admin = login.Login("Core", "123");
+            //this.admin = login.Login(txtUsuario.Text, txtContra.Text);
             if( this.admin != null)
             {
                 VentanaAdmin admin = new VentanaAdmin();

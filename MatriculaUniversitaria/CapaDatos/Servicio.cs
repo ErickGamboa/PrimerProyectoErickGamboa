@@ -12,9 +12,10 @@ namespace CapaDatos
     {
         private StreamReader jsonStream;
         static string ruta = @"C:\Users\Usuario\Desktop\PrimerProyeto\MatriculaUniversitaria\Archivos\";
-
+        public string url;
         public Servicio(string ruta_archivo)
         {
+            this.url = ruta_archivo;
             jsonStream = File.OpenText(ruta + ruta_archivo);
         }
 
@@ -22,7 +23,9 @@ namespace CapaDatos
 
         public String ObtenerArchivo()
         {
-            String json = jsonStream.ReadToEnd();
+            StreamReader jsonStreamsssss = File.OpenText(ruta + this.url);
+            String json = jsonStreamsssss.ReadToEnd();
+            jsonStreamsssss.Close();
             return json;
         }
 
