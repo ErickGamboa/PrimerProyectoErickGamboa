@@ -85,5 +85,22 @@ namespace CapaDatos
             }
             return false;
         }
+
+        public bool EditarMateria(Materia materia)
+        {
+            List<Materia> lista_provicional = CargarListadoDeMaterias();
+            for (int i = 0; i < lista_provicional.Count; i++)
+            {
+                if (materia.idMateria == lista_provicional[i].idMateria)
+                {
+                    lista_provicional.RemoveAt(i);
+                    GuardarMateria(lista_provicional);
+                    lista_provicional.Add(materia);
+                    GuardarMateria(lista_provicional);
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

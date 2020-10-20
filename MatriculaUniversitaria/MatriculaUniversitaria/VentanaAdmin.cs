@@ -193,25 +193,26 @@ namespace MatriculaUniversitaria
         {
             Persona persona = new Persona();
             int row = dgvPersonas.SelectedRows.Count > 0 ? dgvPersonas.SelectedRows[0].Index : -1;
-                
-                if (row >= 0)
+
+            if (row >= 0)
+            {
+                persona = dgvPersonas.CurrentRow.DataBoundItem as Persona;
+
+                if (L_persona.EliminarPersona(persona))
                 {
-                    persona = dgvPersonas.CurrentRow.DataBoundItem as Persona;
-                    
-                    if(L_persona.EliminarPersona(persona))
-                    {
-                        lblprueba.Text = "Se eliminó la persona correctamente";
-                        CargarTablaPersonas();
-                    }
-                    else{
-                        lblprueba.Text = "No se pudo eliminar la persona correctamente";
-                    }
+                    lblprueba.Text = "Se eliminó la persona correctamente";
+                    CargarTablaPersonas();
                 }
                 else
                 {
                     lblprueba.Text = "No se pudo eliminar la persona correctamente";
                 }
             }
+            else
+            {
+                lblprueba.Text = "No se pudo eliminar la persona correctamente";
+            }
+        }
 
         private void btneditarpersona_Click(object sender, EventArgs e)
         {
@@ -231,7 +232,7 @@ namespace MatriculaUniversitaria
             txtNom.Text = persona.nombre;
             txtApellidoUno.Text = persona.apellido1;
             txtApellidoDos.Text = persona.apellido2;
-            cbxSexo.Text =  persona.sexo;
+            cbxSexo.Text = persona.sexo;
             cbxnacimiento.Value = persona.fechaNacimiento;
             cbxAcademico.Text = persona.nivelAcademico;
             cbxingreso.Value = persona.fechaIngreso;
@@ -241,7 +242,7 @@ namespace MatriculaUniversitaria
             lblprueba.Text = "Se ha Editado la persona exitosamente.";
             CargarTablaPersonas();
         }
-        private void CargarDatosCarrera (Carrera carrera)
+        private void CargarDatosCarrera(Carrera carrera)
         {
             id = carrera.idcarrera;
             txtnombrec.Text = carrera.nombreCarrera;
@@ -256,12 +257,11 @@ namespace MatriculaUniversitaria
         {
             id = materia.idMateria;
             txtnombremateria.Text = materia.nombreMateria;
-            txtcreditos.Text = carrera.creditosCarrera;
-            cbxestadoc.Text = carrera.estado;
-            dtpfechaapertura.Value = carrera.fechaApertura;
-            dtpfechacierre.Value = carrera.fechaCierre;
-            lblmensajecarrera.Text = "Se ha Editado la carrera exitosamente.";
-            CargarTablaCarreras();
+            txtcreditosmateria.Text = materia.creditosMateria;
+            txtidcarreramateria.Text = materia.idCarreraMateria;
+            txtprecio.Text = materia.precioMateria;
+            txtcosto.Text = materia.costoMateria;
+            CargarTablaMaterias();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -309,29 +309,29 @@ namespace MatriculaUniversitaria
 
         private void btneliminarlista_Click(object sender, EventArgs e)
         {
-           
-                Carrera carrera = new Carrera();
-                int row = dgvcarrera.SelectedRows.Count > 0 ? dgvcarrera.SelectedRows[0].Index : -1;
 
-                if (row >= 0)
+            Carrera carrera = new Carrera();
+            int row = dgvcarrera.SelectedRows.Count > 0 ? dgvcarrera.SelectedRows[0].Index : -1;
+
+            if (row >= 0)
+            {
+                carrera = dgvcarrera.CurrentRow.DataBoundItem as Carrera;
+
+                if (L_carrera.EliminarCarrera(carrera))
                 {
-                    carrera = dgvcarrera.CurrentRow.DataBoundItem as Carrera;
-
-                    if (L_carrera.EliminarCarrera(carrera))
-                    {
-                        lblmensajecarrera.Text = "Se eliminó la carrera correctamente";
-                        CargarTablaCarreras();
-                    }
-                    else
-                    {
-                        lblmensajecarrera.Text = "No se pudo eliminar la carrera correctamente";
-                    }
+                    lblmensajecarrera.Text = "Se eliminó la carrera correctamente";
+                    CargarTablaCarreras();
                 }
                 else
                 {
                     lblmensajecarrera.Text = "No se pudo eliminar la carrera correctamente";
                 }
-            
+            }
+            else
+            {
+                lblmensajecarrera.Text = "No se pudo eliminar la carrera correctamente";
+            }
+
         }
 
         private void btnseleccionarca_Click(object sender, EventArgs e)
@@ -364,8 +364,8 @@ namespace MatriculaUniversitaria
             Materia materia = new Materia();
             materia.idMateria = DateTime.Now.Millisecond.ToString() + DateTime.Now.Month.ToString();
             materia.nombreMateria = txtnombremateria.Text;
-            materia.creditosMateria = txtnombremateria.Text;
-            materia.idCarrera = txtidcarreramateria.Text;
+            materia.creditosMateria = txtcreditosmateria.Text;
+            materia.idCarreraMateria = txtidcarreramateria.Text;
             materia.precioMateria = txtprecio.Text;
             materia.costoMateria = txtcosto.Text;
             L_materia.RegistrarMateria(materia);
@@ -382,6 +382,27 @@ namespace MatriculaUniversitaria
             {
                 materia = dgvmaterias.CurrentRow.DataBoundItem as Materia;
                 CargarDatosMateria(materia);
+            }
+        }
+
+        private void btncargarmaterias_Click(object sender, EventArgs e)
+        {
+            CargarTablaMaterias();
+        }
+
+        private void btneditarmateria_Click(object sender, EventArgs e)
+        {
+            {
+                Materia materia = new Materia();
+                materia.idMateria = id;
+                materia.nombreMateria = txtnombremateria.Text;
+                materia.creditosMateria = txtcreditosmateria.Text;
+                materia.idCarreraMateria = txtidcarreramateria.Text;
+                materia.precioMateria = txtprecio.Text;
+                materia.costoMateria = txtcosto.Text;
+                L_materia.EditarMateria(materia);
+                CargarTablaMaterias();
+                LimpiarDatosMateria();
             }
         }
     }

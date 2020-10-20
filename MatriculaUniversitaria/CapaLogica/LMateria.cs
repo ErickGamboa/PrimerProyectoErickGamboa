@@ -28,5 +28,9 @@ namespace CapaLogica
         {
             return D_materia.EliminarMateria(materia);
         }
+        public Boolean EditarMateria(Materia materia)
+        {
+            return D_materia.EditarMateria(materia);
+        }
     }
 }
