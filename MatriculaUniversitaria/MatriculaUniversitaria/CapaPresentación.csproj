@@ -76,6 +76,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\CapaEntidades.Carrera.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Materia.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Persona.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

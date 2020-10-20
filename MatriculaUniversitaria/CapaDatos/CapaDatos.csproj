@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DCarrera.cs" />
+    <Compile Include="DMateria.cs" />
     <Compile Include="DPersona.cs" />
     <Compile Include="DLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

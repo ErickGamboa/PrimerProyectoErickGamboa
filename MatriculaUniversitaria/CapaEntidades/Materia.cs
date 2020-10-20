@@ -14,6 +14,5 @@ namespace CapaEntidades
         public string idCarrera { get; set; }
         public string precioMateria { get; set; }
         public string costoMateria { get; set; }
-
     }
 }

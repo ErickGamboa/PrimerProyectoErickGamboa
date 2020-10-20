@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="LCarrera.cs" />
     <Compile Include="LLogin.cs" />
+    <Compile Include="LMateria.cs" />
     <Compile Include="LPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
