@@ -60,6 +60,9 @@ namespace MatriculaUniversitaria
             LimpiarDatosPersona();
 
         }
+        /*
+         metodo encargado de limpiar lo espacios de texto de la ventana persona
+             */
         public void LimpiarDatosPersona()
         {
             txtCed.Text = "";
@@ -67,12 +70,18 @@ namespace MatriculaUniversitaria
             txtApellidoUno.Text = "";
             txtApellidoDos.Text = "";
         }
+        /*
+        metodo encargado de limpiar lo espacios de texto de la ventana carrera
+            */
         public void LimpiarDatosCarrera()
         {
             txtnombrec.Text = "";
             txtcreditos.Text = "";
 
         }
+        /*
+        metodo encargado de limpiar lo espacios de texto de la ventana materia
+            */
         public void LimpiarDatosMateria()
         {
             txtnombremateria.Text = "";
@@ -83,16 +92,24 @@ namespace MatriculaUniversitaria
 
         }
 
+        /*Metodo encargado de cargar la tabla de personas por medio del data grid view
+            */
         public void CargarTablaPersonas()
         {
             LPersona lista_personas = new LPersona();
             dgvPersonas.DataSource = lista_personas.CargarPersonas();
         }
+
+        /*Metodo encargado de cargar la tabla de carreras por medio del data grid view
+    */
         public void CargarTablaCarreras()
         {
             LCarrera lista_carreras = new LCarrera();
             dgvcarrera.DataSource = lista_carreras.CargarCarreras();
         }
+
+        /*Metodo encargado de cargar la tabla de materias por medio del data grid view
+    */
         public void CargarTablaMaterias()
         {
             LMateria lista_materias = new LMateria();
@@ -225,6 +242,9 @@ namespace MatriculaUniversitaria
             }
         }
 
+        /*
+         Metodo para cargar los datos de la persona seleccionada en el espacio de texto
+             */
         private void CargarDatosPersona(Persona persona)
         {
             id = persona.idpersona;
@@ -242,6 +262,10 @@ namespace MatriculaUniversitaria
             lblprueba.Text = "Se ha Editado la persona exitosamente.";
             CargarTablaPersonas();
         }
+
+        /*
+         Metodo para cargar los datos de la carrera seleccionada en el espacio de texto
+             */
         private void CargarDatosCarrera(Carrera carrera)
         {
             id = carrera.idcarrera;
@@ -253,6 +277,10 @@ namespace MatriculaUniversitaria
             lblmensajecarrera.Text = "Se ha Editado la carrera exitosamente.";
             CargarTablaCarreras();
         }
+
+        /*
+         Metodo para cargar los datos de la materia seleccionada en el espacio de texto
+             */
         private void CargarDatosMateria(Materia materia)
         {
             id = materia.idMateria;

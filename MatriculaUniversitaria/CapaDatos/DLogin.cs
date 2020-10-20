@@ -20,6 +20,13 @@ namespace CapaDatos
             this.list_admins = JsonConvert.DeserializeObject<List<EAdmin>>(this.servicio.ObtenerArchivo());
         }
 
+        /*
+         Metodo que recibe un string de usuario y un string de contraseña para 
+         compararlo con el item de objeto Administrador y verificar si son los mismos 
+         credenciales
+         Retorna el item (objeto) si se cumplen con los credenciales de ingreso,
+         de lo contrario retorna null
+             */
         public EAdmin Login(string usuario, string contra)
         {
             foreach (EAdmin item in this.list_admins)

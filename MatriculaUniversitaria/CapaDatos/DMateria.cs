@@ -18,6 +18,12 @@ namespace CapaDatos
 
         }
 
+        /*
+        Metodo que carga una lista de objetos tipo Materia 
+        que se encuentran almacenadosdesde un archivo jSon
+        Retorna listado de las Materias
+            */
+
         public List <Materia> CargarListadoDeMaterias()
         {
             StreamReader jsonStream = File.OpenText(urlMaterias);
@@ -27,6 +33,10 @@ namespace CapaDatos
             return lista_provicional;
         }
 
+        /*
+        Metodo que recibe un objeto de tipo materia, lo serializa y lo guarda en el archivo Json
+        Retorna true si el objeto se guarda en el archivo o false si no lo hace 
+            */
         public bool RegistrarMateria(Materia materia)
         {
             List<Materia> lista_provicional = CargarListadoDeMaterias();
@@ -51,6 +61,10 @@ namespace CapaDatos
 
             return false;
         }
+
+        /*
+        Metodo que recibe una nueva lista para sustitur la lista existente en el archivo Json
+            */
         public void GuardarMateria(List<Materia> lista)
         {
             string archivo;
@@ -71,6 +85,11 @@ namespace CapaDatos
                 File.WriteAllText(urlMaterias, archivo);
             }
         }
+
+        /*
+        Metodo que se encarga de eliminar un objeto materia y guardar nuevamente la lista 
+        Retorna true si se logra o false si no es así 
+            */
         public bool EliminarMateria(Materia materia)
         {
             List<Materia> lista_provicional = CargarListadoDeMaterias();
@@ -86,6 +105,10 @@ namespace CapaDatos
             return false;
         }
 
+        /*
+        Metodo que se encarga de editar un objeto carrera y guardar nuevamente la lista 
+        Retorna true si se logra o false si no es así 
+            */
         public bool EditarMateria(Materia materia)
         {
             List<Materia> lista_provicional = CargarListadoDeMaterias();

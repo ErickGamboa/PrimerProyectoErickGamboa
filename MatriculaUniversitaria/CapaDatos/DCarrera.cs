@@ -15,6 +15,12 @@ namespace CapaDatos
         {
 
         }
+
+        /*
+         Metodo que carga una lista de objetos tipo Carrera 
+         que se encuentran almacenadosdesde un archivo jSon
+         Retorna listado de las carreras
+            */
         public List<Carrera> CargarListadoDeCarreras()
         {
             StreamReader jsonStream = File.OpenText(urlCarrera);
@@ -23,11 +29,20 @@ namespace CapaDatos
             List<Carrera> lista_provicional = JsonConvert.DeserializeObject<List<Carrera>>(json);
             return lista_provicional;
         }
+
+        /*
+         Metodo que retorna una lista de carreras hacia la capa lógica
+         Retorna lista de carreras
+             */
         public List<Carrera> CargarCarrera()
         {
             return CargarListadoDeCarreras();
         }
 
+        /*
+         Metodo que recibe un objeto de tipo carrera, lo serializa y lo guarda en el archivo Json
+         Retorna true si el objeto se guarda en el archivo o false si no lo hace 
+             */
         public bool RegistrarCarrera(Carrera carrera)
         {
             List<Carrera> lista_provicional = CargarListadoDeCarreras();
@@ -52,6 +67,10 @@ namespace CapaDatos
 
             return false;
         }
+
+        /*
+         Metodo que recibe una nueva lista para sustitur la lista existente en el archivo Json
+             */
         public void GuardarCarrera(List<Carrera> lista)
         {
             string archivo;
@@ -72,6 +91,11 @@ namespace CapaDatos
                 File.WriteAllText(urlCarrera, archivo);
             }
         }
+
+        /*
+         Metodo que se encarga de eliminar un objeto carrera y guardar nuevamente la lista 
+         Retorna true si se logra o false si no es así 
+             */
         public bool EliminarCarrera(Carrera carrera)
         {
             List<Carrera> lista_provicional = CargarListadoDeCarreras();
@@ -86,6 +110,12 @@ namespace CapaDatos
             }
             return false;
         }
+
+        /*
+        
+         Metodo que se encarga de editar un objeto carrera y guardar nuevamente la lista 
+         Retorna true si se logra o false si no es así 
+         */
         public bool EditarCarrera(Carrera carrera)
         {
             List<Carrera> lista_provicional = CargarListadoDeCarreras();
