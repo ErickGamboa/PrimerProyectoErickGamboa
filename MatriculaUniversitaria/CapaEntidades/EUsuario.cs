@@ -8,11 +8,11 @@ namespace CapaEntidades
 {
     public class EUsuario
     {
-        string idntificadorUsuario { get; set; }
-        string codigo { get; set; }
-        string idPersona { get; set; }
-        string contrasenna { get; set; }
-        DateTime fechaExpiraContra { get; set; }
-        string estado { get; set; }
+        public string idntificadorUsuario { get; set; }
+        public string codigo { get; set; }
+        public string idPersona { get; set; }
+        public string contrasenna { get; set; }
+        public DateTime fechaExpiraContra { get; set; }
+        public string estado { get; set; }
     }
 }

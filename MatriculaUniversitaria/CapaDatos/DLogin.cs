@@ -37,13 +37,28 @@ namespace CapaDatos
                 }
                 
             }
-            this.LoginUsuaros(usuario, contra);
             return null;
         }
 
-        public EAdmin LoginUsuaros(string usuario, string contra)
+        public Persona LoginUsuaros(string usuario, string contra)
         {
-            //TODO: Hacer logica para login con usuarios.
+            DRegistrarUsuario usu = new DRegistrarUsuario();
+            DPersona per = new DPersona();
+            List<EUsuario> lista_Usuarios = usu.CargarListadoDeUsuarios();
+            List<Persona> lista_Personas = per.CargarListadoDePersonas();
+            foreach (Persona item in lista_Personas)
+            {
+                if (item.cedula.Equals(usuario))
+                {
+                    foreach (EUsuario item_dos in lista_Usuarios)
+                    {
+                        if (item.cedula.Equals(usuario) && item_dos.contrasenna.Equals(contra))
+                        {
+                            return item;
+                        }
+                    }
+                }
+            }
             return null;
         }
     }

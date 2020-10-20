@@ -37,6 +37,7 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblContra
@@ -92,7 +93,7 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(179, 237);
+            this.btnRegistro.Location = new System.Drawing.Point(129, 236);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(75, 23);
             this.btnRegistro.TabIndex = 9;
@@ -118,11 +119,22 @@
             this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(233, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Ir login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VentanaRegistrarse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 283);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnRegistro);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblMensaje;
+        private System.Windows.Forms.Button button1;
     }
 }

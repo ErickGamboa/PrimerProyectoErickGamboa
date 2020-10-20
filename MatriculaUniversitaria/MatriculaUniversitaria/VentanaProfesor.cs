@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace MatriculaUniversitaria
 {
-    public partial class VentanaEstudiante : Form
+    public partial class VentanaProfesor : Form
     {
-        public VentanaEstudiante()
+        public VentanaProfesor()
         {
             InitializeComponent();
-        }
-
-        private void VentanaEstudiante_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btncerrarsesionadmin_Click(object sender, EventArgs e)

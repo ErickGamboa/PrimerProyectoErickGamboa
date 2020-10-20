@@ -132,6 +132,7 @@
             this.carreraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carreraBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.personaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btncerrarsesionadmin = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
@@ -153,10 +154,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl1.Location = new System.Drawing.Point(-4, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1406, 387);
+            this.tabControl1.Size = new System.Drawing.Size(1406, 377);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -189,7 +190,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1398, 361);
+            this.tabPage1.Size = new System.Drawing.Size(1398, 351);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "CRUD personas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1084,11 +1085,22 @@
             // 
             this.personaBindingSource2.DataSource = typeof(CapaEntidades.Persona);
             // 
+            // btncerrarsesionadmin
+            // 
+            this.btncerrarsesionadmin.Location = new System.Drawing.Point(1277, 12);
+            this.btncerrarsesionadmin.Name = "btncerrarsesionadmin";
+            this.btncerrarsesionadmin.Size = new System.Drawing.Size(81, 23);
+            this.btncerrarsesionadmin.TabIndex = 1;
+            this.btncerrarsesionadmin.Text = "Cerrar sesión";
+            this.btncerrarsesionadmin.UseVisualStyleBackColor = true;
+            this.btncerrarsesionadmin.Click += new System.EventHandler(this.btncerrarsesionadmin_Click);
+            // 
             // VentanaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 399);
+            this.Controls.Add(this.btncerrarsesionadmin);
             this.Controls.Add(this.tabControl1);
             this.Name = "VentanaAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1221,5 +1233,6 @@
         private System.Windows.Forms.Label lblmensajemateria;
         private System.Windows.Forms.Button btneditarmateria;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCarreraMateria;
+        private System.Windows.Forms.Button btncerrarsesionadmin;
     }
 }

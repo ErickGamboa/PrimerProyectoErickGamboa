@@ -30,15 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btncerrarsesionadmin = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -48,10 +49,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-1, -4);
+            this.tabControl1.Location = new System.Drawing.Point(-1, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(535, 329);
+            this.tabControl1.Size = new System.Drawing.Size(535, 298);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -62,10 +63,36 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(527, 303);
+            this.tabPage1.Size = new System.Drawing.Size(527, 272);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registro matricula";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(436, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Matricular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(306, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id del curso que deseas matricular";
             // 
             // tabPage2
             // 
@@ -82,30 +109,30 @@
             this.tabPage2.Text = "Evaluación de curso";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id del curso que deseas matricular";
+            this.button2.Location = new System.Drawing.Point(420, 274);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Evaluar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(306, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBox3.Location = new System.Drawing.Point(0, 165);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(527, 20);
+            this.textBox3.TabIndex = 5;
             // 
-            // button1
+            // label3
             // 
-            this.button1.Location = new System.Drawing.Point(433, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Matricular";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(224, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Observaciones: ";
             // 
             // textBox2
             // 
@@ -123,36 +150,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Id del curso que deseas evaluar";
             // 
-            // label3
+            // btncerrarsesionadmin
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(224, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Observaciones: ";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(0, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(527, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(420, 274);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Evaluar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btncerrarsesionadmin.Location = new System.Drawing.Point(446, 12);
+            this.btncerrarsesionadmin.Name = "btncerrarsesionadmin";
+            this.btncerrarsesionadmin.Size = new System.Drawing.Size(81, 23);
+            this.btncerrarsesionadmin.TabIndex = 2;
+            this.btncerrarsesionadmin.Text = "Cerrar sesión";
+            this.btncerrarsesionadmin.UseVisualStyleBackColor = true;
+            this.btncerrarsesionadmin.Click += new System.EventHandler(this.btncerrarsesionadmin_Click);
             // 
             // VentanaEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(535, 320);
+            this.Controls.Add(this.btncerrarsesionadmin);
             this.Controls.Add(this.tabControl1);
             this.Name = "VentanaEstudiante";
             this.Text = "Estudiante";
@@ -179,5 +192,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btncerrarsesionadmin;
     }
 }

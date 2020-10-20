@@ -19,12 +19,14 @@ namespace MatriculaUniversitaria
         public LMateria L_materia;
         public List<Persona> listaTotalDePersonas;
         string id;
-        public VentanaAdmin()
+        public string admin_id;
+        public VentanaAdmin(string id_admin)
         {
             InitializeComponent();
             this.L_persona = new LPersona();
             this.L_carrera = new LCarrera();
             this.L_materia = new LMateria();
+            admin_id = id_admin;
         }
 
 
@@ -43,6 +45,7 @@ namespace MatriculaUniversitaria
         {
             Persona persona = new Persona();
             persona.idpersona = DateTime.Now.Millisecond.ToString() + DateTime.Now.Month.ToString();
+            persona.usuarioRegistra = admin_id;
             persona.cedula = txtCed.Text;
             persona.nombre = txtNom.Text;
             persona.apellido1 = txtApellidoUno.Text;
@@ -432,6 +435,16 @@ namespace MatriculaUniversitaria
                 CargarTablaMaterias();
                 LimpiarDatosMateria();
             }
+        }
+
+        private void btncerrarsesionadmin_Click(object sender, EventArgs e)
+        {
+            ventanaLogin ventanal = new ventanaLogin();
+            ventanal.Show(this);
+            this.Hide();
+
+
+
         }
     }
 }

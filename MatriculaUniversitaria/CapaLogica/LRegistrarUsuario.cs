@@ -16,9 +16,22 @@ namespace CapaLogica
             registro = new DRegistrarUsuario();
         }
 
-        public Persona Registrar(string cedula)
+        /*
+       Método que conecta la capa datos con la capa presentación recibiendo un string cedula
+       Retorna metodo de verificar  registro persona
+           */
+        public Persona VerificarRegistro(string cedula)
         {
-            return registro.Registrar(cedula);
+            return registro.VerificarRegistro(cedula);
+        }
+
+        /*
+       Método que conecta la capa datos con la capa presentación recibiendo un objeto Usuario
+       Retorna metodo de registrar Usuario
+           */
+        public Boolean RegistrarUsuario(EUsuario usuario)
+        {
+            return registro.RegistrarUsuario(usuario);
         }
     }
 }

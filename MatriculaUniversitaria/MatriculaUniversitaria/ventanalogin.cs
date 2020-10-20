@@ -32,11 +32,10 @@ namespace MatriculaUniversitaria
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.admin = login.Login("Core", "123");
-            //this.admin = login.Login(txtUsuario.Text, txtContra.Text);
+            this.admin = login.Login(txtUsuario.Text, txtContra.Text);
             if( this.admin != null)
             {
-                VentanaAdmin admin = new VentanaAdmin();
+                VentanaAdmin admin = new VentanaAdmin(this.admin.id);
                 admin.Show(this);
                 this.Hide();
             }
@@ -57,6 +56,32 @@ namespace MatriculaUniversitaria
             VentanaRegistrarse reg = new VentanaRegistrarse();
             reg.Show(this);
             this.Hide();
+        }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            Persona per = new Persona();
+            per = login.LoginPersona(txtUsuario.Text, txtContra.Text);
+            if (per != null)
+            {
+                if (per.tipoPersona == "Estudiante")
+                {
+                    VentanaEstudiante estudiante = new VentanaEstudiante();
+                    estudiante.Show(this);
+                    this.Hide();
+                }
+                else
+                {
+                    VentanaProfesor profe = new VentanaProfesor();
+                    profe.Show(this);
+                    this.Hide();
+                }
+                
+            }
+            else
+            {
+                lblError.Text = "No existe un usuario con esas credenciales.";
+            }
         }
     }
 }

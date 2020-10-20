@@ -36,6 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.lblRegistrase = new System.Windows.Forms.Label();
+            this.btnPersona = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -88,11 +89,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(334, 215);
+            this.button1.Location = new System.Drawing.Point(306, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Aceptar";
+            this.button1.Text = "Login Administrador";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -108,18 +109,29 @@
             // lblRegistrase
             // 
             this.lblRegistrase.AutoSize = true;
-            this.lblRegistrase.Location = new System.Drawing.Point(191, 198);
+            this.lblRegistrase.Location = new System.Drawing.Point(190, 190);
             this.lblRegistrase.Name = "lblRegistrase";
             this.lblRegistrase.Size = new System.Drawing.Size(60, 13);
             this.lblRegistrase.TabIndex = 9;
             this.lblRegistrase.Text = "Registrarse";
             this.lblRegistrase.Click += new System.EventHandler(this.lblRegistrase_Click);
             // 
+            // btnPersona
+            // 
+            this.btnPersona.Location = new System.Drawing.Point(151, 246);
+            this.btnPersona.Name = "btnPersona";
+            this.btnPersona.Size = new System.Drawing.Size(149, 23);
+            this.btnPersona.TabIndex = 10;
+            this.btnPersona.Text = "Login Estudiante/Profesor";
+            this.btnPersona.UseVisualStyleBackColor = true;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
+            // 
             // ventanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 250);
+            this.ClientSize = new System.Drawing.Size(436, 281);
+            this.Controls.Add(this.btnPersona);
             this.Controls.Add(this.lblRegistrase);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
@@ -147,6 +159,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblRegistrase;
+        private System.Windows.Forms.Button btnPersona;
     }
 }
 
