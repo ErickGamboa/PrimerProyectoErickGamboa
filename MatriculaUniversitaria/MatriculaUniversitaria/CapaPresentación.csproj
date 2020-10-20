@@ -52,6 +52,18 @@
     <Compile Include="VentanaAdmin.Designer.cs">
       <DependentUpon>VentanaAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaDvisionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaDvisionAdmin.Designer.cs">
+      <DependentUpon>VentanaDvisionAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaEstudiante.Designer.cs">
+      <DependentUpon>VentanaEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="ventanalogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +72,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentanaRegistrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaRegistrarse.Designer.cs">
+      <DependentUpon>VentanaRegistrarse.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="VentanaAdmin.resx">
       <DependentUpon>VentanaAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaDvisionAdmin.resx">
+      <DependentUpon>VentanaDvisionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaEstudiante.resx">
+      <DependentUpon>VentanaEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ventanalogin.resx">
       <DependentUpon>ventanalogin.cs</DependentUpon>
@@ -75,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaRegistrarse.resx">
+      <DependentUpon>VentanaRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\CapaEntidades.Carrera.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Materia.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Persona.datasource" />

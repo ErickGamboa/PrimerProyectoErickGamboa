@@ -35,6 +35,7 @@
             this.txtContra = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.lblRegistrase = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -104,11 +105,22 @@
             this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 8;
             // 
+            // lblRegistrase
+            // 
+            this.lblRegistrase.AutoSize = true;
+            this.lblRegistrase.Location = new System.Drawing.Point(191, 198);
+            this.lblRegistrase.Name = "lblRegistrase";
+            this.lblRegistrase.Size = new System.Drawing.Size(60, 13);
+            this.lblRegistrase.TabIndex = 9;
+            this.lblRegistrase.Text = "Registrarse";
+            this.lblRegistrase.Click += new System.EventHandler(this.lblRegistrase_Click);
+            // 
             // ventanaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 250);
+            this.Controls.Add(this.lblRegistrase);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtContra);
@@ -134,6 +146,7 @@
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label lblRegistrase;
     }
 }
 

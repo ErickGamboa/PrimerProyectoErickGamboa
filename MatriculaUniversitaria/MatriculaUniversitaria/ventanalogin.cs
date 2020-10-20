@@ -51,5 +51,12 @@ namespace MatriculaUniversitaria
         {
 
         }
+
+        private void lblRegistrase_Click(object sender, EventArgs e)
+        {
+            VentanaRegistrarse reg = new VentanaRegistrarse();
+            reg.Show(this);
+            this.Hide();
+        }
     }
 }
