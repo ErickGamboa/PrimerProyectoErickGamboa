@@ -56,7 +56,7 @@ namespace CapaDatos
             return false;
         }
 
-        public bool Eliminar(Persona persona)
+        public bool EliminarPersona(Persona persona)
         {
             List<Persona> lista_provicional = CargarListadoDePersonas();
             for (int i = 0; i < lista_provicional.Count; i++)
@@ -64,7 +64,7 @@ namespace CapaDatos
                 if (persona.idpersona == lista_provicional[i].idpersona)
                 {
                     lista_provicional.RemoveAt(i);
-                    Guardar(lista_provicional);
+                    GuardarPersona(lista_provicional);
                     return true;
                 }
             }
@@ -72,7 +72,7 @@ namespace CapaDatos
         }
 
 
-        public void Guardar(List<Persona> lista)
+        public void GuardarPersona(List<Persona> lista)
         {
             string archivo;
             if (lista.Count != 0)
@@ -85,17 +85,15 @@ namespace CapaDatos
                 int x = lista.Count - 1;
                 archivo += JsonConvert.SerializeObject(lista[x]) + "]";
                 File.WriteAllText(url, archivo);
-                //this.servicio.GuardarEnArchivo(nuevojson, "personas.json");
             }
             else
             {
                 archivo = null;
                 File.WriteAllText(url, archivo);
-                //this.servicio.GuardarEnArchivo(nuevojson, "personas.json");
             }
         }
 
-        public bool Editar(Persona persona)
+        public bool EditarPersona(Persona persona)
         {
             List<Persona> lista_provicional = CargarListadoDePersonas();
             for (int i = 0; i < lista_provicional.Count; i++)
@@ -103,9 +101,9 @@ namespace CapaDatos
                 if (persona.idpersona == lista_provicional[i].idpersona)
                 {
                     lista_provicional.RemoveAt(i);
-                    Guardar(lista_provicional);
+                    GuardarPersona(lista_provicional);
                     lista_provicional.Add(persona);
-                    Guardar(lista_provicional);
+                    GuardarPersona(lista_provicional);
                     return true;
                 }
             }

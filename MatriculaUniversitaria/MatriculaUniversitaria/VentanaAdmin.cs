@@ -15,13 +15,14 @@ namespace MatriculaUniversitaria
     public partial class VentanaAdmin : Form
     {
         public LPersona L_persona;
+        public LCarrera L_carrera;
         public List<Persona> listaTotalDePersonas;
         string id;
         public VentanaAdmin()
         {
             InitializeComponent();
             this.L_persona = new LPersona();
-           
+            this.L_carrera = new LCarrera();
         }
 
 
@@ -54,15 +55,21 @@ namespace MatriculaUniversitaria
             L_persona.RegistrarPersona(persona);
             lblprueba.Text = "Se ha guardado la persona exitosamente.";
             CargarTablaPersonas();
-            LimpiarDatos();
+            LimpiarDatosPersona();
 
         }
-        public void LimpiarDatos()
+        public void LimpiarDatosPersona()
         {
             txtCed.Text = "";
             txtNom.Text = "";
             txtApellidoUno.Text = "";
             txtApellidoDos.Text = "";
+        }
+        public void LimpiarDatosCarrera()
+        {
+            txtnombrec.Text = "";
+            txtcreditos.Text = "";
+
         }
 
         public void CargarTablaPersonas()
@@ -73,7 +80,7 @@ namespace MatriculaUniversitaria
         public void CargarTablaCarreras()
         {
             LCarrera lista_carreras = new LCarrera();
-            dgvPersonas.DataSource = lista_carreras.CargarCarreras();
+            dgvcarrera.DataSource = lista_carreras.CargarCarreras();
         }
 
         private void VentanaAdmin_Load(object sender, EventArgs e)
@@ -155,7 +162,7 @@ namespace MatriculaUniversitaria
                 {
                     persona = dgvPersonas.CurrentRow.DataBoundItem as Persona;
                     
-                    if(L_persona.Eliminar(persona))
+                    if(L_persona.EliminarPersona(persona))
                     {
                         lblprueba.Text = "Se elimino la persona correctamente";
                         CargarTablaPersonas();
@@ -177,11 +184,11 @@ namespace MatriculaUniversitaria
             if (row >= 0)
             {
                 persona = dgvPersonas.CurrentRow.DataBoundItem as Persona;
-                CargarDatos(persona);
+                CargarDatosPersona(persona);
             }
         }
 
-        private void CargarDatos(Persona persona)
+        private void CargarDatosPersona(Persona persona)
         {
             id = persona.idpersona;
             txtCed.Text = persona.cedula;
@@ -197,6 +204,17 @@ namespace MatriculaUniversitaria
             cbxestado.Text = persona.estado;
             lblprueba.Text = "Se ha Editado la persona exitosamente.";
             CargarTablaPersonas();
+        }
+        private void CargarDatosCarrera (Carrera carrera)
+        {
+            id = carrera.idcarrera;
+            txtnombrec.Text = carrera.nombreCarrera;
+            txtcreditos.Text = carrera.creditosCarrera;
+            cbxestadoc.Text = carrera.estado;
+            dtpfechaapertura.Value = carrera.fechaApertura;
+            dtpfechacierre.Value = carrera.fechaCierre;
+            lblmensajecarrera.Text = "Se ha Editado la carrera exitosamente.";
+            CargarTablaCarreras();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -214,9 +232,9 @@ namespace MatriculaUniversitaria
             persona.tipoPersona = cbxtipo.Text;
             persona.nacionalidad = cbxnacionalidad.Text;
             persona.estado = cbxestado.Text;
-            L_persona.Editar(persona);
+            L_persona.EditarPersona(persona);
             CargarTablaPersonas();
-            LimpiarDatos();
+            LimpiarDatosPersona();
         }
 
         private void btncargarlista_Click(object sender, EventArgs e)
@@ -233,9 +251,65 @@ namespace MatriculaUniversitaria
             carrera.estado = cbxestadoc.Text;
             carrera.fechaApertura = Convert.ToDateTime(dtpfechaapertura.Text);
             carrera.fechaCierre = Convert.ToDateTime(dtpfechacierre.Text);
+            L_carrera.RegistrarCarrera(carrera);
+            lblprueba.Text = "Se ha guardado la persona exitosamente.";
+            CargarTablaCarreras();
+            LimpiarDatosCarrera();
 
 
 
+        }
+
+        private void btneliminarlista_Click(object sender, EventArgs e)
+        {
+            {
+                Carrera carrera = new Carrera();
+                int row = dgvcarrera.SelectedRows.Count > 0 ? dgvcarrera.SelectedRows[0].Index : -1;
+
+                if (row >= 0)
+                {
+                    carrera = dgvcarrera.CurrentRow.DataBoundItem as Carrera;
+
+                    if (L_carrera.EliminarCarrera(carrera))
+                    {
+                        lblmensajecarrera.Text = "Se elimino la carrera correctamente";
+                        CargarTablaCarreras();
+                    }
+                    else
+                    {
+                        lblmensajecarrera.Text = "No se pudo eliminar la carrera correctamente";
+                    }
+                }
+                else
+                {
+                    lblmensajecarrera.Text = "No se pudo eliminar la  correctamente";
+                }
+            }
+        }
+
+        private void btnseleccionarca_Click(object sender, EventArgs e)
+        {
+            Carrera carrera = new Carrera();
+            int row = dgvcarrera.SelectedRows.Count > 0 ? dgvcarrera.SelectedRows[0].Index : -1;
+            if (row >= 0)
+            {
+                carrera = dgvcarrera.CurrentRow.DataBoundItem as Carrera;
+                CargarDatosCarrera(carrera);
+            }
+        }
+
+        private void btnEditarCa_Click(object sender, EventArgs e)
+        {
+            Carrera carrera = new Carrera();
+            carrera.idcarrera = id;
+            carrera.nombreCarrera = txtnombrec.Text;
+            carrera.creditosCarrera = txtcreditos.Text;
+            carrera.estado = cbxestadoc.Text;
+            carrera.fechaApertura = Convert.ToDateTime(dtpfechaapertura.Text);
+            carrera.fechaCierre = Convert.ToDateTime(dtpfechacierre.Text);
+            L_carrera.EditarCarrera(carrera);
+            CargarTablaCarreras();
+            LimpiarDatosCarrera();
         }
     }
 }

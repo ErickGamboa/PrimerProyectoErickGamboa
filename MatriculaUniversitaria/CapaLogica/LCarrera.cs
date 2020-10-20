@@ -26,5 +26,13 @@ namespace CapaLogica
         {
             return d_carrera.CargarCarrera();
         }
+        public Boolean EliminarCarrera (Carrera carrera)
+        {
+            return d_carrera.EliminarCarrera(carrera);
+        }
+        public Boolean EditarCarrera(Carrera carrera)
+        {
+            return d_carrera.EditarCarrera(carrera);
+        }
     }
 }

@@ -27,14 +27,14 @@ namespace CapaLogica
             return D_persona.CargarPersonas();
         }
 
-        public Boolean Eliminar(Persona persona)
+        public Boolean EliminarPersona(Persona persona)
         {
-            return D_persona.Eliminar(persona);
+            return D_persona.EliminarPersona(persona);
         }
 
-        public Boolean Editar(Persona persona)
+        public Boolean EditarPersona(Persona persona)
         {
-            return D_persona.Editar(persona);
+            return D_persona.EditarPersona(persona);
         }
     }
 }
