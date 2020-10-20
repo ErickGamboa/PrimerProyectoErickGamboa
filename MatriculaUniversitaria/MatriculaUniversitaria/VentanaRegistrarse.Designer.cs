@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblContra = new System.Windows.Forms.Label();
+            this.lblReContra = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lblmensajeregistro = new System.Windows.Forms.Label();
-            this.btnsiguienteregistro = new System.Windows.Forms.Button();
+            this.txtCed = new System.Windows.Forms.TextBox();
+            this.txtContra = new System.Windows.Forms.TextBox();
+            this.txtReContra = new System.Windows.Forms.TextBox();
+            this.btnRegistro = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label2
+            // lblContra
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ingrese su constraseña";
+            this.lblContra.AutoSize = true;
+            this.lblContra.Location = new System.Drawing.Point(65, 107);
+            this.lblContra.Name = "lblContra";
+            this.lblContra.Size = new System.Drawing.Size(117, 13);
+            this.lblContra.TabIndex = 1;
+            this.lblContra.Text = "Ingrese su constraseña";
             // 
-            // label3
+            // lblReContra
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ingrese su constraseña nuevamente";
+            this.lblReContra.AutoSize = true;
+            this.lblReContra.Location = new System.Drawing.Point(62, 175);
+            this.lblReContra.Name = "lblReContra";
+            this.lblReContra.Size = new System.Drawing.Size(179, 13);
+            this.lblReContra.TabIndex = 2;
+            this.lblReContra.Text = "Ingrese su constraseña nuevamente";
             // 
             // label4
             // 
@@ -65,77 +66,90 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Ingrese su cédula";
             // 
-            // textBox1
+            // txtCed
             // 
-            this.textBox1.Location = new System.Drawing.Point(247, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtCed.Location = new System.Drawing.Point(247, 39);
+            this.txtCed.Name = "txtCed";
+            this.txtCed.Size = new System.Drawing.Size(137, 20);
+            this.txtCed.TabIndex = 4;
+            this.txtCed.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox3
+            // txtContra
             // 
-            this.textBox3.Location = new System.Drawing.Point(247, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtContra.Location = new System.Drawing.Point(247, 100);
+            this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
+            this.txtContra.Size = new System.Drawing.Size(137, 20);
+            this.txtContra.TabIndex = 6;
             // 
-            // textBox4
+            // txtReContra
             // 
-            this.textBox4.Location = new System.Drawing.Point(247, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(137, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtReContra.Location = new System.Drawing.Point(247, 168);
+            this.txtReContra.Name = "txtReContra";
+            this.txtReContra.PasswordChar = '*';
+            this.txtReContra.Size = new System.Drawing.Size(137, 20);
+            this.txtReContra.TabIndex = 7;
             // 
-            // lblmensajeregistro
+            // btnRegistro
             // 
-            this.lblmensajeregistro.AutoSize = true;
-            this.lblmensajeregistro.Location = new System.Drawing.Point(65, 258);
-            this.lblmensajeregistro.Name = "lblmensajeregistro";
-            this.lblmensajeregistro.Size = new System.Drawing.Size(0, 13);
-            this.lblmensajeregistro.TabIndex = 8;
+            this.btnRegistro.Location = new System.Drawing.Point(179, 237);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistro.TabIndex = 9;
+            this.btnRegistro.Text = "Registrar";
+            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnsiguienteregistro_Click);
             // 
-            // btnsiguienteregistro
+            // btnOk
             // 
-            this.btnsiguienteregistro.Location = new System.Drawing.Point(351, 248);
-            this.btnsiguienteregistro.Name = "btnsiguienteregistro";
-            this.btnsiguienteregistro.Size = new System.Drawing.Size(75, 23);
-            this.btnsiguienteregistro.TabIndex = 9;
-            this.btnsiguienteregistro.Text = "Siguiente";
-            this.btnsiguienteregistro.UseVisualStyleBackColor = true;
-            this.btnsiguienteregistro.Click += new System.EventHandler(this.btnsiguienteregistro_Click);
+            this.btnOk.Location = new System.Drawing.Point(391, 39);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(47, 23);
+            this.btnOk.TabIndex = 10;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Location = new System.Drawing.Point(55, 207);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
+            this.lblMensaje.TabIndex = 11;
             // 
             // VentanaRegistrarse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 283);
-            this.Controls.Add(this.btnsiguienteregistro);
-            this.Controls.Add(this.lblmensajeregistro);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.btnRegistro);
+            this.Controls.Add(this.txtReContra);
+            this.Controls.Add(this.txtContra);
+            this.Controls.Add(this.txtCed);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblReContra);
+            this.Controls.Add(this.lblContra);
             this.Name = "VentanaRegistrarse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.VentanaRegistrarse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblContra;
+        private System.Windows.Forms.Label lblReContra;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label lblmensajeregistro;
-        private System.Windows.Forms.Button btnsiguienteregistro;
+        private System.Windows.Forms.TextBox txtCed;
+        private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.TextBox txtReContra;
+        private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
